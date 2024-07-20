@@ -1300,10 +1300,10 @@ async function navigate({
 	url = intent?.url || url;
 
 	// abort if user navigated during update
-	if (token !== nav_token) {
-		nav.reject(new Error('navigation aborted'));
-		return false;
-	}
+	// if (token !== nav_token) {
+	// 	nav.reject(new Error('navigation aborted'));
+	// 	return false;
+	// }
 
 	if (navigation_result.type === 'redirect') {
 		// whatwg fetch spec https://fetch.spec.whatwg.org/#http-redirect-fetch says to error after 20 redirects
